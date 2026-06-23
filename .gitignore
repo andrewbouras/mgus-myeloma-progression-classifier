@@ -1,0 +1,28 @@
+# ---- EMBARGOED: never commit (commercial IP / patient-level / outcomes) ----
+# 200-probe locked feature list and any copy of it
+feature_importance.csv
+**/feature_importance.csv
+# MPS module gene->probe composition (scoring-system IP)
+03_mps_scoring_system.py
+**/03_mps_scoring_system.py
+# trained model weights / serialized models
+*.pkl
+*.joblib
+*.h5
+*.pt
+# patient-level expression / phenotype / scores (GEO is public; do not republish here)
+*expression*.csv
+*phenotype*.csv
+*series_matrix*
+*validation_scores*.csv
+# SWOG / outcome data under DUA — must never enter this repo
+*outcome*
+*swog*
+*S0120*clinical*
+# ---- routine ----
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+venv/
+.venv/
