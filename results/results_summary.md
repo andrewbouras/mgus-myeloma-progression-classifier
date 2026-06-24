@@ -35,13 +35,11 @@ An SVM (RBF) classifier achieved the highest test-set AUROC of **0.811** (95% CI
 
 ## Top Predictive Features (LR |Coefficients|)
 
-| Rank | Gene | Probe | Importance |
-|------|------|-------|-----------|
-| 1 | ANKLE1 | 1553138_a_at | 0.574 |
-| 2 | NOC2L | 1559139_at | 0.343 |
-| 3 | IFT80 | 226098_at | 0.335 |
-| 4 | GNB2L1 | 222034_at | 0.318 |
-| 5 | FBXO36 | 236525_at | 0.286 |
+The ranked 200-probe feature list and per-probe importance weights are part of the
+embargoed translational core (`feature_importance.csv`) and are **withheld from this
+public repository**. They are provided to SWOG under the Data Use Agreement and remain
+covered by `prereg/LOCKED_MODEL_HASHES.txt`, so their integrity is independently
+verifiable on release.
 
 ## Pathway Enrichment (FDR < 0.05)
 
