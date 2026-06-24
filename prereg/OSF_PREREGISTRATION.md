@@ -14,6 +14,20 @@
 
 ---
 
+## AMENDMENT v2 — 2026-06-24 (pre-data; supersedes the primary-model designation below)
+
+**Status at amendment:** No SWOG S0120 outcome labels have been received or accessed as of this date. Because no outcome data exists in the investigators' possession, this amendment cannot be outcome-driven and does not constitute a post-hoc analysis.
+
+**What changed and why:** Our internal head-to-head comparison on the UAMS training cohort (GSE235356; see accompanying manuscript) found that the published 36-gene **GS36** signature significantly outperformed the data-driven 200-probe classifier for binary progression prediction (AUROC 0.891 vs 0.811; DeLong p = 0.047), and that a 15-probe consensus core shared by both feature sets recovered ~97% of GS36 performance (AUROC 0.863). To externally validate the model with the strongest internal evidence, the pre-specified hierarchy for the S0120 validation is amended as follows:
+
+- **Primary pre-specified model:** GS36 (36-probe signature, Sun et al. 2023), applied as a locked binary classifier at its training-derived threshold. The genuine, defensible gap S0120 fills is that GS36 has **not previously been externally validated in an independent prospective cohort**.
+- **Secondary pre-specified models:** (1) the **15-probe consensus core** — the compact, platform-translatable candidate (NanoString / LDT) and the primary translational endpoint; (2) the **200-probe data-driven ML** classifier, retained as a comparator.
+- **Unchanged:** all feature sets, hyperparameters, thresholds, scripts, and the SHA-256 lock manifest below remain frozen. No retraining or threshold re-optimization occurs on S0120 data. The DeLong head-to-head and combined-model analyses (§5.7–5.8) are unchanged.
+
+This amendment edits only this pre-registration document (not in the hash manifest); no locked artifact was modified.
+
+---
+
 ## 1. Classifier specification (locked)
 
 - **Task:** binary classification of progression from MGUS or SMM to symptomatic multiple myeloma.
@@ -103,6 +117,11 @@ The `LOCKED_MODEL_HASHES.txt` file in this bundle contains SHA-256 hashes of eve
 | `feature_importance.csv` | 200-probe feature list (locked) |
 | `tuned_hyperparameters.json` | Tuned hyperparameters (locked) |
 
-Repository git commit at lock time: **ba6eaef3fd7695243563ed29e1f3c1d6bba0a49a** (2026-04-04 04:33:07 -0400).
+**Authoritative lock = the SHA-256 hashes above.** Any post-lock modification to these files produces a different SHA-256 and is automatically detectable, independent of any version-control system.
 
-Any post-lock modification to these files produces a different SHA-256 and is automatically detectable.
+Provenance timeline (reconciled):
+- Code/artifact freeze: git commit `ba6eaef3fd7695243563ed29e1f3c1d6bba0a49a`, 2026-04-04 04:33:07 -0400 (in the original development repository).
+- Pre-registration finalized: 2026-04-20.
+- Public, independently inspectable copy of this bundle: git commit `4cb02067` in the public repository, 2026-06-23 (IP-safe; the 200-probe feature list and MPS scoring system are held in a private release but remain covered by the hash manifest above).
+
+Because the development repository is not publicly distributed, external parties should verify integrity against the SHA-256 manifest and the public-repository commit, not the development commit hash.

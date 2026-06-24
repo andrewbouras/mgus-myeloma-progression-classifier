@@ -1,10 +1,17 @@
-# Locked Gene-Expression Classifier for MGUS/SMM → Multiple Myeloma Progression
+# Locked Gene-Expression Classifiers for MGUS/SMM → Multiple Myeloma Progression
 
-Pre-registered, pre-locked external-validation pipeline for a 200-probe machine-learning
-classifier predicting progression from MGUS / smoldering multiple myeloma to symptomatic
-multiple myeloma. This repository exists to make the **pre-locking verifiable**: the model
-specification, hyperparameters, decision threshold, and statistical analysis plan were
+Pre-registered, pre-locked external-validation pipeline for gene-expression classifiers
+predicting progression from MGUS / smoldering multiple myeloma to symptomatic multiple
+myeloma. This repository exists to make the **pre-locking verifiable**: the model
+specifications, hyperparameters, decision thresholds, and statistical analysis plan were
 frozen *before* any external outcome data were received.
+
+**Primary pre-specified model (per pre-registration Amendment v2, 2026-06-24):** the 36-gene
+**GS36** signature (Sun et al. 2023), which significantly outperformed a data-driven 200-probe
+classifier in our internal head-to-head (AUROC 0.891 vs 0.811; DeLong p = 0.047). Secondary
+pre-specified models: a **15-probe consensus core** (the compact, platform-translatable
+candidate) and the 200-probe data-driven ML classifier (comparator). GS36 has not previously
+been externally validated in an independent prospective cohort — the gap this validation fills.
 
 > Status: external validation in the SWOG S0120 cohort (GEO: GSE122231) is pending an
 > executed Data Use Agreement with SWOG/CRAB. This repository is the public, IP-safe
